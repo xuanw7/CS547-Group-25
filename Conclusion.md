@@ -34,8 +34,9 @@ We used past data to predict future crime patterns. Specifically, we looked at t
 
 ### Results
 
-- **Mean Squared Error (MSE)**: The model achieved an MSE of 1.562, showing it can make reasonable predictions.
+- **Mean Absolute Error (MSE)**: The model achieved an MSE of 1.562, showing it can make reasonable predictions.
 - **Mean Percentage Error (MPE)**: The MPE was 54.80%, leaving room for improvement.
+- **Mean Absolute Error (MAE)**: The MAE was 0.54
 
 ### Insights
 
@@ -50,6 +51,7 @@ The baseline model sets a starting point for comparing more complex models. Whil
 We used a Recurrent Neural Network (RNN) to model sequential crime data. The RNN processes time-series data to predict future crime patterns.
 
 Key hyperparameters used:
+
 - **Number of Layers**: 2
 - **Hidden Size**: 64
 - **Non-linearity**: ReLU
@@ -64,7 +66,8 @@ The RNN was trained on sequences of features (e.g., hour of day, crime type coun
 
 - **Validation Loss**: The model's validation loss decreased consistently over 20 epochs, reaching a minimum of **1.2447**.
 - **Test Loss**: The model achieved a test loss of **1.26** and an RMSE of **1.12**.
-- **Mean Percentage Error (MPE)**: The overall MPE was **85.79%**, indicating room for improvement in model accuracy.
+- **Mean Percentage Error (MPE)**: The overall MPE was **31.46%**, indicating improved model accuracy.
+- **Mean Absolute Error (MAE)**: The overall MAE was **0.49**, indicating improved model accuracy.
 
 ### Insights
 
@@ -107,4 +110,3 @@ The `Hour of Day` feature stands out as the most useful for predicting crimes. I
 Improving the weaker features or creating new ones could boost future model accuracy. Focusing on key time-based and categorical features is essential for better predictions.
 
 ---
-
